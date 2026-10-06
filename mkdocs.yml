@@ -1,0 +1,93 @@
+site_name: Backend Cheat Sheet
+site_description: Node.js, Express, API design, PostgreSQL (Neon) and MongoDB, with practical examples from a pharmacy system (PharmaCare)
+site_author: Efron Damasco
+site_url: https://efron07.github.io/backend-cheatsheet/
+repo_url: https://github.com/efron07/backend-cheatsheet
+repo_name: efron07/backend-cheatsheet
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle: { icon: material/weather-night, name: Switch to dark mode }
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle: { icon: material/weather-sunny, name: Switch to light mode }
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.action.edit
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Home: index.md
+  - Foundations:
+      - 1. Backend fundamentals: 01-fundamentals.md
+  - Node.js:
+      - 2. Basics: 02-node-basics.md
+      - 3. Event loop, streams, threads: 03-node-internals.md
+  - Express:
+      - 4. Setup, routing, middleware: 04-express-basics.md
+      - 5. Errors, validation, layers: 05-express-production.md
+  - API design:
+      - 6. REST conventions: 06-api-design-rest.md
+      - 7. Docs, auth styles, webhooks: 07-api-design-advanced.md
+  - PostgreSQL:
+      - 8. Concepts, Neon, SQL: 08-postgres-sql.md
+      - 9. Performance & DBA: 09-postgres-dba.md
+      - 10. From Node.js (Drizzle): 10-postgres-node.md
+  - MongoDB:
+      - 11. Documents, CRUD, modelling: 11-mongodb-basics.md
+      - 12. Indexes, aggregation, Mongoose: 12-mongodb-advanced.md
+  - Production:
+      - 13. Authentication: 13-auth.md
+      - 14. Caching & scaling: 14-caching-scaling.md
+      - 15. Jobs, real-time, integrations: 15-jobs-realtime.md
+      - 16. Security: 16-security.md
+      - 17. Testing: 17-testing.md
+      - 18. Observability: 18-observability.md
+      - 19. Architecture: 19-architecture.md
+      - 20. Deployment: 20-deployment.md
+  - Full stack:
+      - 21. Connecting Next.js: 21-nextjs-integration.md
+  - 22. Quick reference: 22-quick-reference.md
